@@ -1,0 +1,38 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+
+<Meta title="Colors" />
+
+# Colors
+
+export const color = {
+  primary: '#21B185',
+  secondary: '#268CC8',
+  monochrome: {
+    '900': '#222222',
+    '800': '#666666',
+    '700': '#757575',
+    '600': '#878787',
+    '500': '#919191',
+    '400': '#c4c4c4',
+    '300': '#dcdcdc',
+    '200': '#f5f5f5',
+    '100': '#f9f9f9',
+    '0': '#ffffff', 
+  }
+}
+
+<ColorPalette>
+  <ColorItem title="color.primary" subtitle="Primary" colors={[color.primary]} />
+	<ColorItem title="color.secondary" subtitle="Secondary" colors={{ secondary: color.secondary }} />
+  <ColorItem title="color.monochrome" subtitle="Monochrome" colors={Object.values(color.monochrome)} />
+  <ColorItem title="color.monochrome" subtitle="Monochrome" colors={color.monochrome} />
+</ColorPalette>
+
+
+ColorItem 有三個參數
+
+title (string) 標題。
+
+subtitle (string) 副標題。
+
+colors (array | object) 顏色，可接受陣列或物件的參數形式，如用物件時會在色板 (Swatches ) 下出現 key 值，

@@ -8,11 +8,53 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
     onClick: {},
+    // size: {
+    //   control: { type: "select" },
+    //   options: ["small", "medium", "large"],
+    // },
     size: {
-      control: { type: "select" },
-      options: ["small", "medium", "large"],
+      table: {
+        category: "Text",
+        subcategory: "Size",
+      },
+      control: {
+        type: "select",
+        options: ["small", "medium", "large"],
+      },
+    },
+    label: {
+      table: {
+        category: "Text",
+        subcategory: "Label",
+      },
+    },
+    click: {
+      table: {
+        category: "Events",
+      },
     },
   },
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: "red", value: "#f00" },
+        { name: "green", value: "#0f0" },
+        { name: "blue", value: "#00f" },
+      ],
+    },
+    docs: {
+      description: {
+        component: "This is Button's description.",
+      },
+    },
+  },
+  decorators: [
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    // (story) => ({
+    //   component: { story },
+    //   template: '<div style="margin: 3em;"><story /></div>',
+    // }),
+  ],
 };
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
