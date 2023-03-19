@@ -1,3 +1,4 @@
+import '../src/assets/tailwind.css'
 // parameters 是用於定義 Storybook 功能和不同 Addons 行為的參數，
 // 因此不同的 Addons 會有不同的 parameters。
 export const parameters = {

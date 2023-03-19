@@ -1,6 +1,6 @@
 <template>
   <button type="button" :class="classes" @click="onClick" :style="style">
-    {{ label }}
+    {{ label }} {{ primary }}
   </button>
 </template>
 
@@ -38,7 +38,8 @@ export default {
     return {
       classes: computed(() => ({
         "storybook-button": true,
-        "storybook-button--primary": props.primary,
+        "--color-primary": props.primary,
+        // "storybook-button--primary": props.primary,
         "storybook-button--secondary": !props.primary,
         [`storybook-button--${props.size || "medium"}`]: true,
       })),
